@@ -1,0 +1,32 @@
+<!doctype html>
+<head>
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.8.0/dist/es-module-shims.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "solid-js/html": "https://ga.jspm.io/npm:solid-js@1.7.12/html/dist/html.js",
+        "solid-js/web": "https://ga.jspm.io/npm:solid-js@1.7.12/web/dist/dev.js"
+      },
+      "scopes": {
+        "https://ga.jspm.io/": {
+          "solid-js": "https://ga.jspm.io/npm:solid-js@1.7.12/dist/dev.js"
+        }
+      }
+    }
+    </script>
+    <script type="module">
+        import { render } from "solid-js/web";
+        import html from "solid-js/html";
+
+        const Welcome = () => {
+            return html`
+                <h1>Hello, world!</h1>
+                <p>Hello, world!</p>
+            `;
+        };
+        render(Welcome, document.getElementById("app"));
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+</body>
